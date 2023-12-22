@@ -50,7 +50,7 @@ spec:
               port: http
           env:
           - name: PORT
-            value: {{ .Values.service.targetPort }}              
+            value: "{{ .Values.service.targetPort }}"              
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           {{- with .Values.volumeMounts }}
